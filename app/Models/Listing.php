@@ -2,21 +2,10 @@
 
 namespace App\Models;
 
-class Listing
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Listing extends Model
 {
-    public static function all()
-    {
-        return [
-            [
-                'id' => 1,
-                'title' => 'Listing one',
-                'description' => "Long description one"
-            ],
-            [
-                'id' => 2,
-                'title' => 'Listing two',
-                'description' => "Long description two"
-            ]
-        ];
-    }
+    use HasFactory;
 }

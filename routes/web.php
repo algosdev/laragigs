@@ -24,6 +24,13 @@ Route::get('/', function () {
         'listings' => Listing::all()
     ]);
 });
+
+Route::get('/listings/{id}', function ($id) {
+    return view('listing', [
+        'listing' => Listing::find($id)
+    ]);
+});
+
 Route::get('/hello', function () {
     return response("Hi Algo!", 200)->header('4', "3");
 });
